@@ -19,6 +19,7 @@ EXAMPLE=SEG4145_Assignment4
 all:	$(EXAMPLE).c  app_cfg.h  os_cfg.h  includes.h  $(UCOS_PORT_LIB)/ucos_ii.a Makefile
 	@echo --- Recompiling the application ---
 	@gcc -D__WIN32__ $(CFLAGS) -I$(UCOS_SRC) -I$(UCOS_PORT_SRC) -I$(UCOS_PORT_EX) $(EXAMPLE).c $(UCOS_PORT_LIB)/ucos_ii.a /usr/lib/w32api/libwinmm.a /usr/lib/mingw/libcoldname.a  -o $(EXAMPLE).exe
+	@echo --- All Done! ---
 
 $(UCOS_PORT_LIB)/ucos_ii.a:	os_cfg.h
 	@echo --- Recompiling library ucos_ii.a ---
