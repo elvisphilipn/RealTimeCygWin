@@ -11,7 +11,7 @@
    *********************************************************************************************************
  */
 
-#include "../includes.h"
+#include "includes.h"
 
 BOOLEAN lock=FALSE;
 extern void (*interruptTable[])();
